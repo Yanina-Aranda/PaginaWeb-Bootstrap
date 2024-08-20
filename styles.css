@@ -113,9 +113,17 @@ footer i:hover {
     font-size: 1.87em;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 580px) {
+    .navbar-brand {
+        font-size: 2em;
+    }
+
     .carousel-caption {
         bottom: 10px;
+    }
+
+    .carousel-item img {
+        max-height: 370px;
     }
 
     .carousel-caption h5 {

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería Dulce Sabor</title>
+    <link rel="icon" href="./img/cake.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+    <!-- Menú de Navegación -->
+    <header>
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Dulce Sabor</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                                <i class="bi bi-cart"></i> <span id="cartCount" class="badge bg-primary">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel de Imágenes -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/fondo.jpg" class="d-block w-100" alt="Pasteles Deliciosos">
+                    <div class="carousel-caption">
+                        <h5>La dulzura que necesitas!</h5>
+                        <p>En nuestra pastelería, donde los sueños se hornean, cada creación es un capricho en cada mordisco.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/fondo2.jpg" class="d-block w-100" alt="Repostería Fina">
+                    <div class="carousel-caption">
+                        <h5>Celebra la vida, un pastel a la vez</h5>
+                        <p>Con sabor a felicidad en cada bocado, ofrecemos delicias que derriten corazones y celebran la vida. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/fondo3.jpg" class="d-block w-100" alt="Tartas Personalizadas">
+                    <div class="carousel-caption">
+                        <h5>Tu momento dulce del día</h5>
+                        <p>¡Visítanos y disfruta de pequeños placeres que crean grandes sonrisas!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Sección de Productos -->
+        <div id="productos" class="container my-5">
+            <h2 class="titulo">Nuestros Productos</h2>
+            <div id="produc" class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/chocolate.jpg" class="card-img-top" alt="Pastel de Chocolate">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pastel de Chocolate</h5>
+                            <p class="card-text">Delicioso pastel de chocolate con cobertura de ganache.</p>
+                            <button class="btn btn-success addToCart" data-name="Pastel de Chocolate" data-price="10">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/strawberry.jpg" class="card-img-top" alt="Tarta de Fresa">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tarta de Fresa</h5>
+                            <p class="card-text">Tarta fresca de fresa con crema pastelera.</p>
+                            <button class="btn btn-success addToCart" data-name="Tarta de Fresa" data-price="8">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/cheese-cake.jpg" class="card-img-top" alt="Cheesecake">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cheesecake</h5>
+                            <p class="card-text">Cremoso cheesecake con base de galleta.</p>
+                            <button class="btn btn-success addToCart" data-name="Cheesecake" data-price="12">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/cupcakes2.jpg" class="card-img-top" alt="Cupcakes">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cupcakes</h5>
+                            <p class="card-text">Esponjosos cupcakes con diferentes sabores.</p>
+                            <button class="btn btn-success addToCart" data-name="Cupcakes" data-price="5">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/chocolate.jpg" class="card-img-top" alt="Pastel de Chocolate">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Pastel de Chocolate</h5>
+                            <p class="card-text">Delicioso pastel de chocolate con cobertura de ganache.</p>
+                            <button class="btn btn-success addToCart" data-name="Pastel de Chocolate" data-price="10">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/strawberry.jpg" class="card-img-top" alt="Tarta de Fresa">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tarta de Fresa</h5>
+                            <p class="card-text">Tarta fresca de fresa con crema pastelera.</p>
+                            <button class="btn btn-success addToCart" data-name="Tarta de Fresa" data-price="8">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/cheese-cake.jpg" class="card-img-top" alt="Cheesecake">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cheesecake</h5>
+                            <p class="card-text">Cremoso cheesecake con base de galleta.</p>
+                            <button class="btn btn-success addToCart" data-name="Cheesecake" data-price="12">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card mb-4">
+                        <img src="./img/cupcakes2.jpg" class="card-img-top" alt="Cupcakes">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cupcakes</h5>
+                            <p class="card-text">Esponjosos cupcakes con diferentes sabores.</p>
+                            <button class="btn btn-success addToCart" data-name="Cupcakes" data-price="5">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón para cargar más -->
+            <div class="text-center mt-4">
+                <button id="btn-cargar-mas" class="btn btn-primary">Ver más productos</button>
+            </div>
+        </div>
+
+        <!-- Nosotros -->
+        <section id="nosotros" class="about-section text-center">
+            <div class="container">
+                <h2 class="titulo">Sobre Nosotros</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="./img/pasteleria.jpg" alt="Pastelería Dulce Tentación" class="img-fluid rounded-pill">
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center">
+                        <div>
+                            <h3>Pastelería Dulce Tentación</h3>
+                            <p>
+                                En Pastelería Dulce Tentación, nos especializamos en crear momentos especiales a través de nuestros exquisitos dulces. Desde nuestra apertura en 2010, hemos estado comprometidos en ofrecer la más alta calidad en pasteles, tartas y postres artesanales, utilizando solo los mejores ingredientes frescos.
+                            </p>
+                            <p>
+                                Nuestro equipo de chefs pasteleros apasionados pone su corazón en cada creación, combinando técnicas tradicionales con un toque moderno para deleitar a nuestros clientes. Ya sea para una boda, un cumpleaños o simplemente un antojo dulce, estamos aquí para hacer que cada celebración sea inolvidable.
+                            </p>
+                            <p>
+                                Visítanos en nuestra tienda y descubre por qué somos la pastelería favorita de la ciudad. ¡Esperamos verte pronto!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <div id="contacto" class="container my-5">
+            <h2 class="titulo">Contáctanos</h2>
+            <form id="contactForm" class="needs-validation" novalidate>
+                <div class="mb-4 position-relative">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" required>
+                    <div class="invalid-tooltip">
+                        Por favor ingresa tu nombre.
+                    </div>
+                </div>
+                <div class="mb-4 position-relative">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-tooltip">
+                        Por favor ingresa un correo electrónico válido.
+                    </div>
+                </div>
+                <div class="mb-4 position-relative">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                    <div class="invalid-tooltip">
+                        Por favor ingresa un mensaje.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Modal de Alerta Formulario -->
+        <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="alertModalLabel">Formulario Enviado</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¡Gracias por contactarnos! Te responderemos a la brevedad.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal del Carrito -->
+        <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul id="cartItems" class="list-group">
+                            <!-- Los items del carrito se agregarán aquí dinámicamente -->
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Confirmación de Agregado al Carrito -->
+        <div class="modal fade" id="cartConfirmationModal" tabindex="-1" aria-labelledby="cartConfirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cartConfirmationModalLabel">Producto agregado al carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¡El producto ha sido agregado al carrito con éxito!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continuar comprando</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="openCart()">Ver carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Pie de Página -->
+    <footer id="footer" class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-3 text-md-start">
+                    <h5 class="text-uppercase">Dulce Sabor</h5>
+                    <p>
+                        Las mejores tartas, pasteles y dulces de la ciudad. ¡Visítanos!
+                    </p>
+                </div>
+                <div class="col-md-3 text-md-end siguenos">
+                    <h5 class="text-uppercase">Síguenos</h5>
+                    <p>
+                        Nuestras redes!
+                    </p>
+                    <a href="#" class="text-dark me-2">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="text-dark me-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="text-dark me-2">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="text-dark">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10 text-center mt-3">
+                    <p class="mb-0">&copy; 2024 Dulce Sabor. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-2">
+                    <a href="#" class="btn btn-link"><i class="bi bi-arrow-up-square-fill subir"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
